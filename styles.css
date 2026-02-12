@@ -166,6 +166,43 @@ body {
   max-width: 700px;
 }
 
+.lab {
+  display: flex;
+  gap: 80px;
+  padding: 160px 80px;
+  max-width: 1200px;
+}
+
+.lab-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #6A6A6A;
+  width: 200px;
+}
+
+.lab-content {
+  flex: 1;
+}
+
+.lab-project h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.lab-project p {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 12px;
+}
+
+.lab-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: #6A6A6A;
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -184,6 +221,10 @@ body {
   gap: 40px;
 }
 .road {
+  flex-direction: column;
+  gap: 40px;
+}
+.lab {
   flex-direction: column;
   gap: 40px;
 }

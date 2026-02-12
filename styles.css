@@ -92,6 +92,46 @@ body {
   color: #6A6A6A;
 }
 
+.about {
+  display: flex;
+  gap: 80px;
+  padding: 160px 80px;
+  max-width: 1200px;
+}
+
+.about-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #6A6A6A;
+  width: 200px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 32px;
+}
+
+.about-list {
+  list-style: none;
+}
+
+.about-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -105,4 +145,8 @@ body {
   .hero h2 {
     font-size: 32px;
   }
+  .about {
+  flex-direction: column;
+  gap: 40px;
+}
 }

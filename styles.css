@@ -51,6 +51,10 @@ body {
   flex: 1;
 }
 
+.hero-space {
+    flex: 1;
+}
+
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 72px;
@@ -88,12 +92,6 @@ body {
   color: #6A6A6A;
 }
 
-.hero-image img {
-  max-width: 420px;
-  width: 100%;
-  height: auto;
-}
-
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -106,9 +104,5 @@ body {
 
   .hero h2 {
     font-size: 32px;
-  }
-
-  .hero-image {
-    margin-top: 40px;
   }
 }

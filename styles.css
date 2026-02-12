@@ -230,6 +230,41 @@ body {
   width: 100%;
 }
 
+.system-overview {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.system-overview h5 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: #6A6A6A;
+}
+
+.system-diagram {
+  display: inline-block;
+  font-family: 'Inter', monospace;
+  font-size: 14px;
+  line-height: 2.4;
+  color: #111;
+  text-align: center;
+}
+
+.system-diagram .arrow {
+  color: #0A1A3F; /* your deep navy accent */
+  font-weight: 500;
+}
+
+.system-note {
+  margin: 32px auto 0;
+  max-width: 520px;
+  font-size: 14px;
+  color: #6A6A6A;
+  line-height: 1.8;
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;

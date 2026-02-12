@@ -265,6 +265,34 @@ body {
   line-height: 1.8;
 }
 
+/* ---------- Subtle Link Animation ---------- */
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -337,4 +365,33 @@ body {
   letter-spacing: 1px;
   border-bottom: 2px solid #1a2a44;
   padding-bottom: 4px;
+}
+/* ---------- Contact Section ---------- */
+
+.contact {
+  padding: 120px 0;
+}
+
+.contact-label {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #6A6A6A;
+}
+
+.contact-content h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.contact-links {
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
 }

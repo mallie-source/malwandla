@@ -291,3 +291,41 @@ body {
   gap: 40px;
 }
 }
+.case-study {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.case-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #1a2a44;
+  margin-bottom: 40px;
+}
+
+.case-study h1 {
+  font-family: serif;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.case-intro {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.case-section {
+  margin-bottom: 60px;
+}
+
+.case-section h3 {
+  font-family: serif;
+  margin-bottom: 15px;
+}
+
+.case-links a {
+  text-decoration: none;
+  border-bottom: 2px solid #1a2a44;
+  padding-bottom: 4px;
+}

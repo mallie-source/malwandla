@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecological Data Ingestion Architecture</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section class="case-study">
+
+    <div class="case-label">CASE STUDY / 01</div>
+
+    <h1>Ecological Data Ingestion Architecture</h1>
+
+    <p class="case-intro">
+      A modular ingestion pipeline designed to standardize, validate, and normalize
+      ecological observation data submitted from distributed field researchers.
+    </p>
+
+    <div class="case-section">
+      <h3>Problem</h3>
+      <p>
+        Field-submitted datasets frequently contain inconsistent formatting,
+        irregular date structures, improper numeric fields, and ambiguous species naming.
+        Without controlled intake, analytical integrity degrades downstream.
+      </p>
+    </div>
+
+    <div class="case-section">
+      <h3>Architectural Design</h3>
+      <p>
+        The system was intentionally separated into layered modules:
+      </p>
+      <ul>
+        <li>Ingestion — structured CSV intake</li>
+        <li>Validation — schema enforcement & data integrity checks</li>
+        <li>Normalization — standardized casing, ISO dates, numeric transformation</li>
+        <li>Output — clean structured archive + rejection log</li>
+      </ul>
+    </div>
+
+    <div class="case-section">
+      <h3>Pipeline Flow</h3>
+      <pre>
+FIELD SUBMISSION
+↓
+SCHEMA VALIDATION
+↓
+NORMALIZATION LAYER
+↓
+STRUCTURED ARCHIVE
+      </pre>
+    </div>
+
+    <div class="case-section">
+      <h3>Outcome</h3>
+      <p>
+        The result is a deterministic ingestion system that enforces reproducibility,
+        preserves structured integrity, and demonstrates scalable architectural thinking.
+      </p>
+    </div>
+
+    <div class="case-links">
+      <a href="https://github.com/mallie-source/research-data-ingestion-architecture" target="_blank">
+        View Source Code →
+      </a>
+    </div>
+
+  </section>
+
+</body>
+</html>

@@ -132,6 +132,40 @@ body {
   font-size: 16px;
 }
 
+.road {
+  display: flex;
+  gap: 80px;
+  padding: 160px 80px;
+  max-width: 1200px;
+}
+
+.road-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #6A6A6A;
+  width: 200px;
+}
+
+.road-content {
+  flex: 1;
+}
+
+.road-item {
+  margin-bottom: 64px;
+}
+
+.road-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.road-item p {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -146,6 +180,10 @@ body {
     font-size: 32px;
   }
   .about {
+  flex-direction: column;
+  gap: 40px;
+}
+.road {
   flex-direction: column;
   gap: 40px;
 }

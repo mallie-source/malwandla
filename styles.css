@@ -41,10 +41,10 @@ body {
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 120px 80px;
-  gap: 80px;
+  padding: 160px 80px;
+  max-width: 1200px;
 }
 
 .hero-text {
@@ -55,12 +55,24 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 72px;
   font-weight: 600;
+  line-height: 1.1;
 }
 
 .hero h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 48px;
-  margin-top: 8px;
+  margin-top: 12px;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0E1A2B;
+  margin-top: 12px;
 }
 
 .hero-sub {

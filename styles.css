@@ -1,3 +1,7 @@
+/* ============================= */
+/* Global Reset */
+/* ============================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +14,10 @@ body {
   color: #111111;
 }
 
+/* ============================= */
+/* Navigation */
+/* ============================= */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -19,7 +27,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #111111;
+  color: #111;
   margin-left: 24px;
   position: relative;
 }
@@ -39,6 +47,10 @@ body {
   width: 100%;
 }
 
+/* ============================= */
+/* Hero */
+/* ============================= */
+
 .hero {
   display: flex;
   justify-content: flex-start;
@@ -52,7 +64,7 @@ body {
 }
 
 .hero-space {
-    flex: 1;
+  flex: 1;
 }
 
 .hero h1 {
@@ -92,6 +104,32 @@ body {
   color: #6A6A6A;
 }
 
+/* ============================= */
+/* Section Layout Template */
+/* ============================= */
+
+.section {
+  display: flex;
+  gap: 80px;
+  padding: 160px 80px;
+  max-width: 1200px;
+}
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #6A6A6A;
+  width: 200px;
+}
+
+.section-content {
+  flex: 1;
+}
+
+/* ============================= */
+/* About */
+/* ============================= */
+
 .about {
   display: flex;
   gap: 80px;
@@ -118,7 +156,7 @@ body {
 
 .about p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 700px;
   margin-bottom: 32px;
 }
@@ -132,39 +170,9 @@ body {
   font-size: 16px;
 }
 
-.road {
-  display: flex;
-  gap: 80px;
-  padding: 160px 80px;
-  max-width: 1200px;
-}
-
-.road-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  color: #6A6A6A;
-  width: 200px;
-}
-
-.road-content {
-  flex: 1;
-}
-
-.road-item {
-  margin-bottom: 64px;
-}
-
-.road-item h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-.road-item p {
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 700px;
-}
+/* ============================= */
+/* Lab */
+/* ============================= */
 
 .lab {
   display: flex;
@@ -192,9 +200,9 @@ body {
 
 .lab-project p {
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 700px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .lab-meta {
@@ -204,13 +212,13 @@ body {
 }
 
 .lab-links {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .lab-links a {
   text-decoration: none;
-  color: #111111;
-  margin-right: 24px;
+  color: #111;
+  margin-right: 28px;
   position: relative;
   font-size: 15px;
 }
@@ -230,6 +238,10 @@ body {
   width: 100%;
 }
 
+/* ============================= */
+/* System Overview */
+/* ============================= */
+
 .system-overview {
   margin-top: 80px;
   text-align: center;
@@ -245,16 +257,9 @@ body {
 
 .system-diagram {
   display: inline-block;
-  font-family: 'Inter', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
   line-height: 2.4;
-  color: #111;
-  text-align: center;
-}
-
-.system-diagram .arrow {
-  color: #0A1A3F; /* your deep navy accent */
-  font-weight: 500;
 }
 
 .system-note {
@@ -265,134 +270,46 @@ body {
   line-height: 1.8;
 }
 
-/* ---------- Subtle Link Animation ---------- */
+/* ============================= */
+/* Contact */
+/* ============================= */
 
-a {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 1px;
-  background-color: #000;
-  transition: width 0.3s ease;
-}
-
-a:hover {
-  color: #000;
-}
-
-a:hover::after {
-  width: 100%;
+.contact {
+  padding: 160px 0;
 }
 
 .contact-wrapper {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero h1 {
-    font-size: 48px;
-  }
-
-  .hero h2 {
-    font-size: 32px;
-  }
-  .about {
-  flex-direction: column;
-  gap: 40px;
-}
-.road {
-  flex-direction: column;
-  gap: 40px;
-}
-.lab {
-  flex-direction: column;
-  gap: 40px;
-}
-}
-.case-study {
-  max-width: 900px;
-  margin: 120px auto;
-  padding: 0 40px;
-}
-
-.case-label {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #1a2a44;
-  margin-bottom: 40px;
-}
-
-.case-study h1 {
-  font-family: serif;
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
-.case-intro {
-  font-size: 18px;
-  margin-bottom: 60px;
-}
-
-.case-section {
-  margin-bottom: 60px;
-}
-
-.case-section h3 {
-  font-family: serif;
-  margin-bottom: 15px;
-}
-
-.case-links a {
-  text-decoration: none;
-  border-bottom: 2px solid #1a2a44;
-  padding-bottom: 4px;
-}
-.back-link {
-  display: inline-block;
-  margin-bottom: 60px;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #1a2a44;
-  padding-bottom: 4px;
-}
-/* ---------- Contact Section ---------- */
-
-.contact {
-  padding: 120px 0;
+  padding: 0 80px;
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
 }
 
 .contact-label {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
   color: #6A6A6A;
+  width: 200px;
+}
+
+.contact-content {
+  flex: 1;
 }
 
 .contact-content h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .contact-content p {
-  max-width: 600px;
-  margin-bottom: 40px;
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.7;
   color: #555;
+  margin-bottom: 40px;
 }
 
 .contact-links {
@@ -400,6 +317,7 @@ a:hover::after {
   gap: 30px;
   font-weight: 500;
 }
+
 .contact-links a {
   text-decoration: none;
   color: #1a2a44;
@@ -411,4 +329,75 @@ a:hover::after {
 .contact-links a:hover {
   border-color: #1a2a44;
   opacity: 0.85;
+}
+
+/* ============================= */
+/* Case Study */
+/* ============================= */
+
+.case-study {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.case-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #6A6A6A;
+  margin-bottom: 40px;
+}
+
+.case-study h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.case-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+.case-section {
+  margin-bottom: 60px;
+}
+
+.case-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 15px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 60px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #1a2a44;
+  padding-bottom: 4px;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .hero,
+  .about,
+  .lab,
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
 }

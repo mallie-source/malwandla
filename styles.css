@@ -395,3 +395,15 @@ a:hover::after {
   gap: 30px;
   font-weight: 500;
 }
+.contact-links a {
+  text-decoration: none;
+  color: #1a2a44;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-links a:hover {
+  border-color: #1a2a44;
+  opacity: 0.85;
+}

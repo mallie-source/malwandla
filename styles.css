@@ -44,7 +44,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 160px 80px;
-  max-width: 1200px;
 }
 
 .hero-image {
@@ -54,14 +53,14 @@ body {
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 520px; /* controls visual balance */
+  width: 100%; /* controls visual balance */
   height: auto;
   display: block;
 }
 
 .hero-text {
   flex: 1;
+  max-width: 600px;
 }
 
 .hero-space {

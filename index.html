@@ -33,7 +33,7 @@
   <div class="hero-space"></div>
 </section>
 
-<section class="about" id="about">
+<section class="about section" id="about">
   <div class="about-label">01 / ABOUT</div>
 
   <div class="about-content">
@@ -55,7 +55,7 @@
   </div>
 </section>
 
-<section class="road" id="road">
+<section class="road section" id="road">
   <div class="road-label">02 / ROAD</div>
 
   <div class="road-content">
@@ -87,7 +87,7 @@
   </div>
 </section>
 
-<section class="lab" id="lab">
+<section class="lab section" id="lab">
   <div class="lab-label">03 / LAB</div>
 
   <div class="lab-content">
@@ -142,7 +142,7 @@
 </div> <!-- closes .lab-content -->
 </section>
 
-<section class="contact" id="contact">
+<section class="contact section" id="contact">
   <div class="contact-label">04 / CONTACT</div>
 
   <div class="contact-content">
@@ -160,6 +160,24 @@
     </div>
   </div>
 </section>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 
 </body>
 </html>

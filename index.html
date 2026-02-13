@@ -12,6 +12,12 @@
 
 <body>
 
+    <div class="loader">
+  <div class="loader-inner">
+    <span>MM</span>
+  </div>
+</div>
+
 <nav class="nav">
   <div class="logo">MM</div>
   <div class="nav-links">
@@ -174,6 +180,15 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => {
   observer.observe(section);
+});
+</script>
+
+<script>
+window.addEventListener("load", function() {
+  const loader = document.querySelector(".loader");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 700);
 });
 </script>
 

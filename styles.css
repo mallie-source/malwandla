@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
- padding: 80px 80px 160px 80px;
+ padding: 60px 80px 160px 80px;
 }
 
 .hero-image {

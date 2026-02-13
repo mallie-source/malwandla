@@ -311,15 +311,39 @@ body {
   transform: translateY(0);
 }
 
-.reveal-text {
+/* --- Staggered content inside sections --- */
+
+.section h3,
+.section h4,
+.section p,
+.section li {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal-text.visible {
+.section.visible h3 {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.section.visible h4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section.visible p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.section.visible li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
 @media (max-width: 900px) {

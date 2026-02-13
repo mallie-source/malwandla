@@ -45,7 +45,6 @@ body {
   align-items: center;
   padding: 160px 80px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .hero-text {
@@ -98,7 +97,6 @@ body {
   gap: 80px;
   padding: 160px 80px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .about-label {
@@ -139,7 +137,6 @@ body {
   gap: 80px;
   padding: 160px 80px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .road-label {
@@ -174,7 +171,6 @@ body {
   gap: 80px;
   padding: 160px 80px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .lab-label {
@@ -276,7 +272,6 @@ body {
   gap: 80px;
   padding: 160px 80px;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .contact-label {
@@ -318,7 +313,7 @@ body::after {
   content: "";
   position: fixed;
   top: 0;
-  right: 80px;
+  left: 1000px;
   width: 1px;
   height: 100vh;
   background: rgba(0, 0, 0, 0.06);
@@ -336,13 +331,13 @@ body::after {
   transform: translateY(0);
 }
 
-.section {
+.reveal-text {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.visible {
+.reveal-text.visible {
   opacity: 1;
   transform: translateY(0);
 }

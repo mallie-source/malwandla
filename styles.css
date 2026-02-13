@@ -47,6 +47,19 @@ body {
   max-width: 1200px;
 }
 
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 520px; /* controls visual balance */
+  height: auto;
+  display: block;
+}
+
 .hero-text {
   flex: 1;
 }
@@ -378,6 +391,14 @@ body {
 .contact {
   flex-direction: column;
   gap: 40px;
+}
+.hero-image {
+  margin-top: 40px;
+  justify-content: flex-start;
+}
+
+.hero-image img {
+  max-width: 100%;
 }
 
 }

@@ -70,15 +70,6 @@ body {
   display: inline-block;
 }
 
-.hero h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0E1A2B;
-  margin-top: 12px;
-}
-
 .hero-sub {
   margin-top: 16px;
   font-size: 20px;
@@ -309,20 +300,9 @@ body {
   position: relative;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 1000px;
-  width: 1px;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.06);
-  pointer-events: none;
-}
-
 .section {
-  opacity: 1;
-  transform: translateY(20px);
+  opacity: 0;
+  transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 

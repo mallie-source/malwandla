@@ -103,14 +103,17 @@ body {
 
 .about h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 40px;
-  margin-bottom: 24px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  letter-spacing: -0.3px;
 }
 
 .about p {
   font-size: 18px;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 620px;
   margin-bottom: 32px;
 }
 

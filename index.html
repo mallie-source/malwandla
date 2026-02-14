@@ -42,7 +42,9 @@
 <div class="hero-image">
   <img src="styles.jpg" alt="Portrait of Malwandla Matelakengisa">
 </div>
-<div class="hero-arrow handwritten">↓</div>
+<div class="hero-arrow handwritten">
+  <span>↓</span>
+</div>
 </section>
 
 <section class="about section" id="about">
@@ -208,21 +210,22 @@ window.addEventListener("load", function() {
 </script>
 
 <script>
-const handwrittenElements = document.querySelectorAll(
+const handwrittenNotes = document.querySelectorAll(
   '.hero-arrow, .about-note, .road-note, .lab-note, .contact-note'
 );
 
 const handwrittenObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const el = entry.target;
+    const note = entry.target;
 
     if (entry.isIntersecting) {
-      el.style.opacity = "1";
-      el.classList.add("animate");
+      note.style.opacity = "1";
+      note.classList.add("animate");
     } else {
-      el.style.opacity = "0";
-      el.classList.remove("animate");
-      const span = el.querySelector("span");
+      note.style.opacity = "0";
+      note.classList.remove("animate");
+
+      const span = note.querySelector("span");
       if (span) {
         span.style.animation = "none";
         void span.offsetWidth;
@@ -230,10 +233,10 @@ const handwrittenObserver = new IntersectionObserver((entries) => {
       }
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.2 });
 
-handwrittenElements.forEach(el => {
-  handwrittenObserver.observe(el.closest('section'));
+handwrittenNotes.forEach(note => {
+  handwrittenObserver.observe(note);
 });
 </script>
 

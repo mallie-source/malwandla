@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malwandla Matelakengisa</title>
+<link rel="icon" type="image/png" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -39,6 +42,7 @@
 <div class="hero-image">
   <img src="styles.jpg" alt="Portrait of Malwandla Matelakengisa">
 </div>
+<div class="hero-arrow handwritten">↓</div>
 </section>
 
 <section class="about section" id="about">
@@ -55,6 +59,9 @@
   Structured systems. Clear outputs. No noise.
 </p>
   </div>
+  <div class="about-note handwritten">
+  <span>(because it's fun)</span>
+</div>
 </section>
 
 <section class="road section" id="road">
@@ -85,7 +92,9 @@
         Focused on clarity, reproducibility, and output quality.
       </p>
     </div>
-
+    <div class="road-note handwritten">
+  <span>(where I've been)</span>
+</div>
   </div>
 </section>
 
@@ -142,6 +151,9 @@
 
 </div> <!-- closes .lab-project -->
 </div> <!-- closes .lab-content -->
+<div class="lab-note handwritten">
+  <span>(My projects)</span>
+</div>
 </section>
 
 <section class="contact section" id="contact">
@@ -161,6 +173,9 @@
       <a href="https://linkedin.com/in/malwandla-matelakengisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
+  <div class="contact-note handwritten">
+  <span>reach out :)</span>
+</div>
 </section>
 
 <script>
@@ -189,6 +204,36 @@ window.addEventListener("load", function() {
   setTimeout(() => {
     loader.classList.add("hidden");
   }, 700);
+});
+</script>
+
+<script>
+const handwrittenElements = document.querySelectorAll(
+  '.hero-arrow, .about-note, .road-note, .lab-note, .contact-note'
+);
+
+const handwrittenObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const el = entry.target;
+
+    if (entry.isIntersecting) {
+      el.style.opacity = "1";
+      el.classList.add("animate");
+    } else {
+      el.style.opacity = "0";
+      el.classList.remove("animate");
+      const span = el.querySelector("span");
+      if (span) {
+        span.style.animation = "none";
+        void span.offsetWidth;
+        span.style.animation = null;
+      }
+    }
+  });
+}, { threshold: 0.4 });
+
+handwrittenElements.forEach(el => {
+  handwrittenObserver.observe(el.closest('section'));
 });
 </script>
 

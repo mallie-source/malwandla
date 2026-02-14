@@ -475,6 +475,7 @@ body {
   border-bottom: 2px solid #1a2a44;
   padding-bottom: 4px;
 }
+
 .back-link {
   display: inline-block;
   margin-bottom: 60px;
@@ -483,4 +484,94 @@ body {
   letter-spacing: 1px;
   border-bottom: 2px solid #1a2a44;
   padding-bottom: 4px;
+}
+
+/* ---------- Handwritten Accent System ---------- */
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  color: #7bb570;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+/* Writing animation */
+.handwritten span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #7bb570;
+  width: 0;
+}
+
+.handwritten.animate span {
+  animation: writeText 2s steps(30) forwards;
+}
+
+@keyframes writeText {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Positioning (based on your screenshots) */
+
+.hero {
+  position: relative;
+}
+
+.hero-arrow {
+  right: 220px;
+  top: 120px;
+  font-size: 42px;
+  animation: floatArrow 2s ease-in-out infinite;
+}
+
+@keyframes floatArrow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+.about {
+  position: relative;
+}
+
+.about-note {
+  right: 120px;
+  top: 150px;
+  font-size: 36px;
+}
+
+.road {
+  position: relative;
+}
+
+.road-note {
+  right: 80px;
+  top: 200px;
+  font-size: 34px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.lab {
+  position: relative;
+}
+
+.lab-note {
+  right: 120px;
+  top: 180px;
+  font-size: 34px;
+}
+
+.contact {
+  position: relative;
+}
+
+.contact-note {
+  left: 200px;
+  bottom: 100px;
+  font-size: 38px;
 }

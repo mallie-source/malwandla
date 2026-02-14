@@ -219,9 +219,14 @@ const handwrittenObserver = new IntersectionObserver((entries) => {
     const note = entry.target;
 
     if (entry.isIntersecting) {
-      note.style.opacity = "1";
-      note.classList.add("animate");
-    } else {
+
+  // wait for section animation to finish (1.1s)
+  setTimeout(() => {
+    note.style.opacity = "1";
+    note.classList.add("animate");
+  }, 1300); // 1.1s section animation + 0.2s pause
+
+} else {
       note.style.opacity = "0";
       note.classList.remove("animate");
 

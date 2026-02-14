@@ -503,12 +503,11 @@ body {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #7bb570;
   width: 0;
 }
 
 .handwritten.animate span {
-  animation: writeText 2s steps(30) forwards;
+  animation: writeText 2.8s steps(30) forwards;
 }
 
 @keyframes writeText {
@@ -553,7 +552,7 @@ body {
   right: 80px;
   top: 200px;
   font-size: 34px;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   text-orientation: mixed;
 }
 

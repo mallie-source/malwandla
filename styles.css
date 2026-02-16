@@ -507,7 +507,7 @@ body {
 }
 
 .handwritten.animate span {
-  animation: writeText 2.8s steps(30) forwards;
+  animation: writeText 2.8s ease forwards;
 }
 
 @keyframes writeText {
@@ -515,7 +515,10 @@ body {
   to { width: 100%; }
 }
 
-/* Positioning (based on your screenshots) */
+@keyframes writeTextVertical {
+  from { height: 0; }
+  to { height: 100%; }
+}
 
 .hero {
   position: relative;
@@ -559,6 +562,16 @@ body {
 .lab {
   position: relative;
 }
+
+.road-note span {
+  height: 0;
+  width: auto;
+}
+
+.road-note.animate span {
+  animation: writeTextVertical 2.8s ease forwards;
+}
+
 
 .lab-note {
   right: 120px;

@@ -524,19 +524,6 @@ body {
   position: relative;
 }
 
-.hero-arrow {
-  right: 220px;
-  top: 120px;
-  font-size: 42px;
-  animation: floatArrow 2s ease-in-out infinite;
-}
-
-@keyframes floatArrow {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-  100% { transform: translateY(0); }
-}
-
 .about {
   position: relative;
 }
